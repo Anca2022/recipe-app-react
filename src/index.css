@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
+:root{
+  --primary: #1F2934; 
+  --accent: #EF6351; 
+  --accent-hover:#DE5448; 
+  /* #EF796B;  */
+  --bg: #F7F1F0;
+  --bg2: #F8F9FB;
+
+}
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
