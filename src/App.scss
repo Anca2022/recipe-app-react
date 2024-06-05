@@ -1,94 +1,195 @@
 .App {
     text-align: center;
-    height: 200vh;
-    .home-page{
-        .navbar{
-            background-color: white;
-            position: fixed; 
-            top: 0; 
-            width:100%;
-            // backdrop-filter: blur(15px);
-            opacity: 0.95;
+    .navbar{
+        background-color: white;
+        position: fixed; 
+        top: 0; 
+        width:100%;
+        // backdrop-filter: blur(15px);
+        opacity: 0.95;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+        .logo{
+            font-family:"Lugrasimo", cursive;
+            font-size:24px;
+        }
+        .navigation{
+            list-style: none;
             display:flex;
             flex-direction:row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem;
-            .logo{
-                font-family:"Lugrasimo", cursive;
-                font-size:24px;
-            }
-            .navigation{
-                list-style: none;
-                display:flex;
-                flex-direction:row;
-                li{
-                    margin-left:10px;
+            li{
+                margin-left:10px;
+                a{
+                    text-decoration: none;
+                    color: var(--primary);
+                    font-weight:500;
+                    &:hover{
+                        color:var(--accent);
+                    }
                 }
+                .is-active{
+                    color:var(--accent);
+                    
+                }
+                
+
             }
         }
+    }
+    .home-page{
         .hero{
-            background: center / 100%  no-repeat url("./assets/hero.jpg");
-            min-height: 40vh;
+            background: 30% 70% / 100%   url("./assets/hero.jpg");
+            min-height: 35vh;
             display: flex;
             flex-direction: column;
             justify-content: end;
             h1{
                 font-family:"Lugrasimo", cursive;
-                padding-bottom:20px;
+                padding-bottom:25px;
+                text-shadow: 1px 1px 4px white;
             }
         }
-        .recipe-card{
-            background-color: var(--bg);
-            max-width: 280px;
-            margin:0 auto;
-            .image{
-                
-                img{
-                    width:100%;
-                }
+        .search-bar{
+            width:80%;
+            max-width: 400px;
+            margin:-15px auto 15px auto;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid var(--accent-30);
+            box-shadow: 0 0 3px var(--accent-30);
+            border-radius: 15px;
+            padding:0 1rem;
+            background-color: white;
+            input{
+                width:80%;
+                height:40px;
+                border:none;
+                outline:none;
+                background-color: transparent;
+                font-size: 16px;
             }
-            .main-details{
-                border-bottom: 2px solid lightgray;
+            svg{
+                width:17px;
+                color:rgb(65, 65, 65);
             }
-            .extra-details{
-                display:flex;
-                flex-direction:row;
-                justify-content: space-between;
-                padding:0.5rem;
-                div:first-child {
-                    p{
-                        text-align:left;
+        }
+        .recipes{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap:2%;
+            margin-top: 3rem;
+            margin-bottom:2rem;
+            .recipe-card{
+                background-color: var(--bg);
+                max-width: 280px;
+                margin:2rem auto;
+                padding:1rem;
+                border-radius:20px;
+                .image{
+                    width:240px; 
+                    height:200px;
+                    margin: -25px auto  0 auto;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    box-shadow: 0 0 5px lightgray;
+                    img{
+                        width:100%;
+                        height:100%;
+                        object-fit: cover;
                     }
                 }
-                div:nth-child(2){
-                    border-right: 2px solid lightgray;
-                    margin-top:0.3rem;
-                    margin-bottom:0.3rem;
+                .main-details{
+                    border-bottom: 2px solid rgb(234, 233, 233);
+                    h3{
+                        margin-top: 25px;
+                        margin-bottom:15px;
+                        line-height: 20px;
+                    }
+                    .food-type{
+                        font-size:13px;
+                        background-color: var(--accent-30);
+                        padding:0.1rem 0.6rem;
+                        border-radius:3rem;
+                    }
+                    .rating{
+                        margin: 5px 0 10px 0;
+                        font-size:14px;
+                        font-weight:500;
+                        svg{
+                            color:gold;
+                            width:15px;
+                        }
+                        span{
+                            color:gray; 
+                            margin: 0 7px 0 7px;
+                            font-weight:400;
+                        }
+                    }
                 }
-                div:last-child{
-                    p{
-                        text-align:right;
+                .extra-details{
+                    display:flex;
+                    flex-direction:row;
+                    justify-content: space-between;
+                    padding:0.5rem;
+                    margin-top:0.5rem;
+                    div:first-child {
+                        p{
+                            text-align:left;
+                        }
+                    }
+                    div:nth-child(2){
+                        border-right: 2px solid rgb(234, 233, 233);
+                        margin-top:0.3rem;
+                        margin-bottom:0.3rem;
+                    }
+                    div:last-child{
+                        p{
+                            text-align:right;
+                        }
+                    }
+                    div{
+                        p:first-child{
+                            color:gray;
+                            font-size:13px;
+                        }
+                        p:nth-child(2){
+                            font-weight:500; 
+                            font-size:15px;
+                        }
                     }
                 }
             }
         }
         
+        
     }
 }
-
+@media (min-width:768px){
+    .App{
+        .home-page{
+            .hero{
+                background: 40% 60% / 100%   url("./assets/hero.jpg");
+            }
+        }
+    }
+    
+}
 @media (min-width:1024px){
     .App{
-        .homepage{
-            .navbar{
-                padding:0.5rem 1.5rem;
-                .navigation{
-                    li{
-                        margin-left:20px;
-                    }
+        .navbar{
+            padding:0.5rem 1.5rem;
+            .navigation{
+                li{
+                    margin-left:20px;
                 }
-            }   
-        }
+            }
+        }   
     }
     
    }

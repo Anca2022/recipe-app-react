@@ -4,10 +4,10 @@
   --primary: #1F2934; 
   --accent: #EF6351; 
   --accent-hover:#DE5448; 
+  --accent-30: rgba(239, 99, 81, 0.3);
   /* #EF796B;  */
-  --bg: #F7F1F0;
-  --bg2: #F8F9FB;
-
+  --bg: #F8F9FB;
+  --bg2: #F7F1F0;
 }
 *{
   box-sizing: border-box;
@@ -20,6 +20,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color:var(--primary);
 }
 
 code {
