@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+.App a {
+  text-decoration: none;
+  color: inherit;
+}
 .App .navbar {
   background-color: white;
   position: fixed;
@@ -9,7 +13,8 @@
   opacity: 0.95;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 30%;
   align-items: center;
   padding: 0.5rem;
 }
@@ -26,8 +31,6 @@
   margin-left: 10px;
 }
 .App .navbar .navigation li a {
-  text-decoration: none;
-  color: var(--primary);
   font-weight: 500;
 }
 .App .navbar .navigation li a:hover {
@@ -73,14 +76,15 @@
 .App .home-page .search-bar svg {
   width: 17px;
   color: rgb(65, 65, 65);
+  cursor: pointer;
 }
 .App .home-page .recipes {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2%;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin: 3rem auto 2rem auto;
+  width: 80%;
 }
 .App .home-page .recipes .recipe-card {
   background-color: var(--bg);
