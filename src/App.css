@@ -76,7 +76,6 @@
 .App .home-page .search-bar svg {
   width: 17px;
   color: rgb(65, 65, 65);
-  cursor: pointer;
 }
 .App .home-page .recipes {
   display: flex;

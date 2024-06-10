@@ -2,7 +2,7 @@ export const fakeRecipes = [
     {
     id: 1, 
     name: 'Black Bean and Corn Quesadillas',
-    image: '../assets/black-bean-and-corn-quesadillas.jpg', 
+    image: './assets/black-bean-and-corn-quesadillas.jpg',
     type: 'mexican', 
     meal:['lunch', 'dinner'], 
     rating: 4.7, 
@@ -16,7 +16,7 @@ export const fakeRecipes = [
     {
     id: 2, 
     name: 'Beef Samosas',
-    image: '../assets/samosas.jpg', 
+    image: './assets/samosas.jpg', 
     type: 'indian',
     meal:['breakfast'], 
     rating: 4.5, 
@@ -30,7 +30,7 @@ export const fakeRecipes = [
     {
     id: 3, 
     name: 'Chef John`s Mulligatawny Soup',
-    image: '../assets/Chef-Johns-Soup.jpg', 
+    image: './assets/Chef-Johns-Soup.jpg', 
     type: 'indian', 	
     meal:['lunch', 'dinner'], 
     rating: 4.9 , 
@@ -44,7 +44,7 @@ export const fakeRecipes = [
     {
     id: 4, 
     name: 'Chickpea Tikka Masala',
-    image: '../assets/chickpea-tikka-masala.jpg', 
+    image: './assets/chickpea-tikka-masala.jpg', 
     type: 'indian', 	
     meal:['lunch', 'dinner'], 
     rating: 5, 
@@ -58,7 +58,7 @@ export const fakeRecipes = [
     {
     id: 5, 
     name: 'Lazy Wonton Soup',
-    image: '../assets/Lazy-Wonton-Soup.jpg', 
+    image: './assets/Lazy-Wonton-Soup.jpg', 
     type: 'chinese', 	
     meal:['breakfast', 'lunch'], 
     rating: 4.7, 
@@ -72,7 +72,7 @@ export const fakeRecipes = [
     {
     id: 6, 
     name: 'Blackened Shrimp Tacos with Pineapple',
-    image: '../assets/Blackened-Shrimp-and-Pineapple-Tacos.jpg', 
+    image: './assets/Blackened-Shrimp-and-Pineapple-Tacos.jpg', 
     type: 'mexican', 	
     meal:['lunch', 'dinner'], 
     rating: 4.3, 
@@ -86,7 +86,7 @@ export const fakeRecipes = [
     {
     id: 7, 
     name: 'Sesame Chicken with Broccoli',
-    image: '../assets/Stir-Fried-Sesame-Chicken-with-Broccoli.jpg',
+    image: './assets/Stir-Fried-Sesame-Chicken-with-Broccoli.jpg',
     type: 'chinese', 	
     meal:['dinner'], 
     rating: 4.2, 
@@ -100,7 +100,7 @@ export const fakeRecipes = [
     {
     id: 8, 
     name: 'Mexican Street Corn Deviled Eggs',
-    image: '../assets/Mexican-Street-Corn-Deviled-Eggs.jpg', 
+    image: './assets/Mexican-Street-Corn-Deviled-Eggs.jpg', 
     type: 'mexican', 	
     meal:['breakfast'], 
     rating: 4.5, 
@@ -114,7 +114,7 @@ export const fakeRecipes = [
     {
     id: 9, 
     name: 'Pork Dumplings',
-    image: '../assets/pork-dumplings.jpg', 
+    image: './assets/pork-dumplings.jpg', 
     type: 'chinese', 	
     meal:['breakfast', 'lunch', 'dinner'], 
     rating: 4.6, 

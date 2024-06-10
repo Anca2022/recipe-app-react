@@ -1,12 +1,9 @@
 import '../App.css';
 export default function RecipeCard(props) { 
-    
     return (
         <div className="recipe-card">
             <div className="image">
-                {/* <img src={require(props.recipe.image)} alt={props.recipe.name}></img> */}
-                <img src={require('../assets/Blackened-Shrimp-and-Pineapple-Tacos.jpg')} alt={props.recipe.name}></img>
-                
+                <img src={props.recipe.image} alt={props.recipe.name}></img>
             </div>
             <div className="main-details">
                 <h3>{props.recipe.name}</h3>
