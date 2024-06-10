@@ -30,8 +30,6 @@ export default function HomePage () {
                    <div>Sorry, your search did not match any recipe. </div> 
                 } 
             </div>
-            
-        </div>
-        
+        </div> 
     )
 }

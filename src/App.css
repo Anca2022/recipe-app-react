@@ -86,10 +86,12 @@
   margin: 3rem auto 2rem auto;
   width: 80%;
 }
+.App .home-page .recipes a {
+  margin: 2rem auto;
+}
 .App .home-page .recipes .recipe-card {
   background-color: var(--bg);
   max-width: 280px;
-  margin: 2rem auto;
   padding: 1rem;
   border-radius: 20px;
 }
@@ -143,6 +145,7 @@
   justify-content: space-between;
   padding: 0.5rem;
   margin-top: 0.5rem;
+  text-transform: capitalize;
 }
 .App .home-page .recipes .recipe-card .extra-details div:first-child p {
   text-align: left;
@@ -163,10 +166,109 @@
   font-weight: 500;
   font-size: 15px;
 }
+.App .recipe-details {
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  padding: 5rem 0.5rem 2rem;
+}
+.App .recipe-details a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.App .recipe-details a svg {
+  width: 20px;
+  margin-right: 5px;
+}
+.App .recipe-details a:hover {
+  color: var(--accent-hover);
+}
+.App .recipe-details h1 {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+.App .recipe-details .recipe-image {
+  width: 90%;
+  max-width: 500px;
+  margin: 2rem auto 1rem auto;
+  background-color: var(--bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px var(--shadow);
+}
+.App .recipe-details .recipe-image img {
+  width: 100%;
+  aspect-ratio: 2/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App .recipe-details .recipe-image .recipe-extra {
+  text-transform: capitalize;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+.App .recipe-details .recipe-image .recipe-extra span {
+  flex-basis: 50%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.App .recipe-details .recipe-image .recipe-extra span svg {
+  width: 15px;
+  color: var(--accent);
+  margin-right: 10px;
+}
+.App .recipe-details .how-to-prepare h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.App .recipe-details .how-to-prepare ul {
+  margin-left: 2rem;
+  list-style: disc;
+}
+.App .recipe-details .how-to-prepare ul li {
+  margin-bottom: 0.8rem;
+  padding-left: 5px;
+  line-height: 20px;
+}
+.App .recipe-details .how-to-prepare ul li::marker {
+  color: var(--accent);
+}
+.App .recipe-details .how-to-prepare div:nth-child(2) li {
+  margin-bottom: 1.5rem;
+}
 
 @media (min-width: 768px) {
   .App .home-page .hero {
     background: 40% 60%/100% url("./assets/hero.jpg");
+  }
+  .App .recipe-details .recipe-image {
+    max-width: 700px;
+  }
+  .App .recipe-details .recipe-image .recipe-extra {
+    margin-left: 2rem;
+  }
+  .App .how-to-prepare {
+    display: flex;
+    flex-direction: row;
+  }
+  .App .how-to-prepare h2 {
+    padding-left: 1rem;
+  }
+  .App .how-to-prepare div:first-child {
+    flex-basis: 45%;
+  }
+  .App .how-to-prepare div:first-child ul {
+    padding-right: 10px;
+    border-right: 2px solid var(--accent-30);
+  }
+  .App .how-to-prepare div:nth-child(2) {
+    flex-basis: 55%;
   }
 }
 @media (min-width: 1024px) {
@@ -175,5 +277,8 @@
   }
   .App .navbar .navigation li {
     margin-left: 20px;
+  }
+  .App .recipe-details {
+    width: 80%;
   }
 }/*# sourceMappingURL=App.css.map */

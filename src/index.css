@@ -2,6 +2,7 @@
 
 :root{
   --primary: #1F2934; 
+  --shadow: rgba(31, 41, 52, 0.4); 
   --accent: #EF6351; 
   --accent-hover:#DE5448; 
   --accent-30: rgba(239, 99, 81, 0.3);

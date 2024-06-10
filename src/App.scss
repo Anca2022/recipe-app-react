@@ -92,10 +92,12 @@
             gap:2%;
             margin: 3rem auto 2rem auto;
             width:80%;
+            a{
+                margin:2rem auto;
+            }
             .recipe-card{
                 background-color: var(--bg);
                 max-width: 280px;
-                margin:2rem auto;
                 padding:1rem;
                 border-radius:20px;
                 .image{
@@ -147,6 +149,7 @@
                     justify-content: space-between;
                     padding:0.5rem;
                     margin-top:0.5rem;
+                    text-transform: capitalize;
                     div:first-child {
                         p{
                             text-align:left;
@@ -176,12 +179,116 @@
             }
         }
     }
+    .recipe-details{
+        text-align:left;
+        width:90%;
+        margin: 0 auto;
+        padding:5rem 0.5rem 2rem;
+        a{
+            display: flex;
+            flex-direction: row; 
+            align-items: center;
+            margin-bottom: 2rem;
+            svg{
+                width:20px;
+                margin-right: 5px;
+            }
+            &:hover{
+                color:var(--accent-hover); 
+            }
+        }
+        h1{
+            text-align:center;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+        .recipe-image{
+            width:90%; 
+            max-width: 500px;
+            margin: 2rem auto 1rem auto;
+            background-color: var(--bg);
+            border-radius:10px;
+            overflow: hidden;
+            box-shadow: 2px 2px 10px var(--shadow);
+            img{
+                width:100%;
+                aspect-ratio:2/1; 
+                object-fit:cover;
+            }
+            .recipe-extra{
+                text-transform: capitalize;
+                margin: 1rem auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 0.5rem;
+                span{
+                    flex-basis:50%;
+                    text-align: left;
+                    svg{
+                        width: 15px;
+                        color:var(--accent);
+                        margin-right:10px;
+                    }
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .how-to-prepare{
+            h2{
+                margin-top: 2rem;
+                margin-bottom:1rem;
+            }
+            ul{
+                margin-left:2rem;
+                list-style:disc;
+                li{
+                    margin-bottom: 0.8rem;
+                    padding-left:5px;
+                    line-height: 20px;
+                }
+                li::marker{
+                    color:var(--accent);
+                }
+            }
+            div:nth-child(2){
+                li{
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
 }
 @media (min-width:768px){
     .App{
         .home-page{
             .hero{
                 background: 40% 60% / 100%   url("./assets/hero.jpg");
+            }
+        }
+        .recipe-details{ 
+            .recipe-image{
+                max-width: 700px;
+                .recipe-extra{
+                    margin-left: 2rem;
+                }
+            }
+        }
+        .how-to-prepare{
+            display:flex;
+            flex-direction:row;
+            h2{
+                padding-left: 1rem;
+            }
+            div:first-child{
+                flex-basis: 45%;
+                ul{
+                    padding-right: 10px;
+                    border-right: 2px solid var(--accent-30);
+                }
+            }
+            div:nth-child(2){
+                flex-basis: 55%;
             }
         }
     }
@@ -196,6 +303,9 @@
                     margin-left:20px;
                 }
             }
-        }   
+        }  
+        .recipe-details{
+            width:80%;
+        } 
     }
 }
