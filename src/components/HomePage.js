@@ -2,13 +2,13 @@ import RecipeCard from "./RecipeCard";
 import { Link, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import { fakeRecipes } from "../fakedata.js";
-import '../App.css';
-
 
 export default function HomePage () {
-    const recipes=fakeRecipes; 
     const [searchTerm, setSearchTerm] = useState(''); 
     const [searchParams] = useSearchParams();
+    
+
+    const recipes=fakeRecipes; 
     let message = 'All the recipes';
     let publishedRecipes; 
 

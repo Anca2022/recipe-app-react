@@ -4,6 +4,7 @@ import HomePage from './components/HomePage';
 import Navbar from './components/Navbar';
 import RecipeDetails from './components/RecipeDetails';
 import NotFound from './components/NotFound';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/recipe-details/:id" element={<RecipeDetails />} ></Route>
         <Route path="*" element={<NotFound/>} ></Route>
       </Routes>
+
+      <ScrollToTop />
     </div>
   );
 }

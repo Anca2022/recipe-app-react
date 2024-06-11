@@ -10,6 +10,9 @@
   --bg: #F8F9FB;
   --bg2: #F7F1F0;
 }
+html{
+  scroll-behavior: smooth;
+}
 *{
   box-sizing: border-box;
   margin:0;

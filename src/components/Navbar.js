@@ -1,11 +1,12 @@
-import '../App.css'; 
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import { useRef } from 'react';
 
 export default function Navbar () {
     let mealsDivRef= useRef();
     let cuisinesDivRef= useRef();
     const [searchParams] = useSearchParams();
+    const {pathname} = useLocation();
+
     const isActive = {
         color: '#EF6351'    
     }
@@ -27,7 +28,7 @@ export default function Navbar () {
         <div className="navbar">
             <div className="logo"><Link to="/">Recipes</Link></div>
             <ul className="navigation">
-                <li ><Link to='/' style={searchParams.size <1 ? isActive : {} }> 
+                <li ><Link to='/' style={searchParams.size <1 && pathname === '/' ? isActive : {} }> 
                     ALL</Link></li>
                 <li onMouseOver={handleMouseOverMeals} onMouseOut={handleMouseOutMeals}>
                     <Link to='/'  style={searchParams.size > 0 && searchParams.get('meal')  ? isActive : {} }>
