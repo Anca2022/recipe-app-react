@@ -9,7 +9,6 @@
         position: fixed; 
         top: 0; 
         width:100%;
-        // backdrop-filter: blur(15px);
         opacity: 0.95;
         display:flex;
         flex-direction:row;
@@ -35,10 +34,6 @@
                     &:hover{
                         color:var(--accent);
                     }
-                }
-                .is-active{
-                    color:var(--accent);
-                    
                 }
                 .meals{
                     position: absolute; 
@@ -99,6 +94,10 @@
                 color:rgb(65, 65, 65);
                 // cursor: pointer;
             }
+        }
+        h2{
+            margin-top: 3rem;
+            text-transform: capitalize;
         }
         .recipes{
             display:flex;

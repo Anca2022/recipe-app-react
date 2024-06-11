@@ -38,9 +38,6 @@
 .App .navbar .navigation li a:hover {
   color: var(--accent);
 }
-.App .navbar .navigation li .is-active {
-  color: var(--accent);
-}
 .App .navbar .navigation li .meals {
   position: absolute;
   text-align: left;
@@ -94,6 +91,10 @@
 .App .home-page .search-bar svg {
   width: 17px;
   color: rgb(65, 65, 65);
+}
+.App .home-page h2 {
+  margin-top: 3rem;
+  text-transform: capitalize;
 }
 .App .home-page .recipes {
   display: flex;
