@@ -17,12 +17,14 @@
         gap:30%;
         align-items: center;
         padding: 0.5rem;
+        ul{
+            list-style: none;
+        }
         .logo{
             font-family:"Lugrasimo", cursive;
             font-size:24px;
         }
         .navigation{
-            list-style: none;
             display:flex;
             flex-direction:row;
             li{
@@ -34,15 +36,29 @@
                         color:var(--accent);
                     }
                 }
-                
                 .is-active{
                     color:var(--accent);
                     
                 }
-                
-
+                .meals{
+                    position: absolute; 
+                    text-align: left;
+                    margin-left:-5px;
+                    padding: 10px;
+                    background-color: white;
+                    opacity:0.95;
+                    display:none;
+                    border-radius: 10px;
+                    ul{
+                        margin-left: -15px;
+                        li{
+                            padding-bottom:5px;
+                        }
+                    }
+                }
             }
         }
+        
     }
     .home-page{
         .hero{

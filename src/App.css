@@ -18,12 +18,14 @@
   align-items: center;
   padding: 0.5rem;
 }
+.App .navbar ul {
+  list-style: none;
+}
 .App .navbar .logo {
   font-family: "Lugrasimo", cursive;
   font-size: 24px;
 }
 .App .navbar .navigation {
-  list-style: none;
   display: flex;
   flex-direction: row;
 }
@@ -38,6 +40,22 @@
 }
 .App .navbar .navigation li .is-active {
   color: var(--accent);
+}
+.App .navbar .navigation li .meals {
+  position: absolute;
+  text-align: left;
+  margin-left: -5px;
+  padding: 10px;
+  background-color: white;
+  opacity: 0.95;
+  display: none;
+  border-radius: 10px;
+}
+.App .navbar .navigation li .meals ul {
+  margin-left: -15px;
+}
+.App .navbar .navigation li .meals ul li {
+  padding-bottom: 5px;
 }
 .App .home-page .hero {
   background: 30% 70%/100% url("./assets/hero.jpg");
