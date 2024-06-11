@@ -25,7 +25,7 @@ export default function Navbar () {
             <ul className="navigation">
                 <li><NavLink to="/" className={({isActive})=>isActive ? 'is-active' : ''}>ALL</NavLink></li>
                 <li onMouseOver={handleMouseOverMeals} onMouseOut={handleMouseOutMeals}>
-                    <NavLink to="/" className={({isActive})=>isActive ? 'is-active' : ''}>Meals</NavLink>
+                    <NavLink to="/meals" className={({isActive})=>isActive ? 'is-active' : ''}>Meals</NavLink>
                     <div className='meals' ref={mealsRef}>
                         <ul>
                             <li><Link to="/meals?meal=breakfast">breakfast</Link></li>
