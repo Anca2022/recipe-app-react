@@ -273,6 +273,21 @@
             }
         }
     }
+    .not-found{
+        margin-top:10rem;
+        h3{
+            font-weight:500;
+        }
+        a{
+            display:inline-block;
+            margin-top: 2rem;
+            text-decoration: underline;
+            &:hover{
+                color:var(--accent);
+            }
+
+        }
+    }
 }
 @media (min-width:768px){
     .App{

@@ -16,7 +16,6 @@ export default function HomePage () {
         let meal = searchParams.get('meal'); 
         let type = searchParams.get('type'); 
         if(meal){
-            console.log('meals exist: ' + meal)
             publishedRecipes=recipes.filter( recipe => recipe.meal.includes(meal) )
             message = `${meal} recipes`;
         } else if (type) {
