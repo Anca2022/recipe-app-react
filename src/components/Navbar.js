@@ -35,9 +35,9 @@ export default function Navbar () {
                     Meals</Link>
                     <div className='meals' ref={mealsDivRef}>
                         <ul>
-                            <li><Link to="/?meal=breakfast">breakfast</Link></li>
-                            <li><Link to="/?meal=lunch">lunch</Link></li>
-                            <li><Link to="/?meal=dinner">dinner</Link></li>
+                            <li><Link to="/?meal=starter">Starter</Link></li>
+                            <li><Link to="/?meal=lunch">Lunch</Link></li>
+                            <li><Link to="/?meal=dinner">Dinner</Link></li>
                         </ul>
                     </div>  
                 </li>
@@ -46,9 +46,9 @@ export default function Navbar () {
                     Cuisines</Link>
                     <div className='meals' ref={cuisinesDivRef}>
                         <ul>
-                            <li><Link to="/?type=indian">indian</Link></li>
-                            <li><Link to="/?type=mexican">mexican</Link></li>
-                            <li><Link to="/?type=chinese">chinese</Link></li>
+                            <li><Link to="/?type=indian">Indian</Link></li>
+                            <li><Link to="/?type=mexican">Mexican</Link></li>
+                            <li><Link to="/?type=chinese">Chinese</Link></li>
                         </ul>
                     </div>
                 </li>
