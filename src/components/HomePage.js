@@ -67,17 +67,22 @@ export default function HomePage () {
        
     // }, [])
 
-    //filtering by searchParams
+
+
+//filtering by searchParams
+    
     useEffect (()=>{
         function filterByParams(){
             let meal = searchParams.get('meal'); 
             let type = searchParams.get('type'); 
-            if(meal){
-                setPublishedRecipes(recipes.filter( recipe => recipe.meal.includes(meal) ));
-                setMessage(`${meal} recipes`);
-            } else if (type) {
-                setPublishedRecipes(recipes.filter( recipe => recipe.type.includes(type)));
-                setMessage(`${type} food recipes`);
+            if(recipes){
+                if(meal){
+                    setPublishedRecipes(recipes.filter( recipe => recipe.meal.includes(meal) ));
+                    setMessage(`${meal} recipes`);
+                } else if (type) {
+                    setPublishedRecipes(recipes.filter( recipe => recipe.type.includes(type)));
+                    setMessage(`${type} food recipes`);
+                }
             }
         }
         searchParams.size > 0 ? 
