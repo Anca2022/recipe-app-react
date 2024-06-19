@@ -10,34 +10,63 @@ export default function HomePage () {
     const [searchParams] = useSearchParams();
     
     //getting data from API
-    useEffect(()=>{
-        let localRecipes = []; 
-        fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=598856858b914ca7bf3be933a61434e4&cuisine=chinese,indian,mexican&instructionsRequired=true&addRecipeInformation=true&fillIngredients=true&number=20")
+    useEffect( ()=>{
+        fetch("https://api.edamam.com/api/recipes/v2?type=public&app_id=6330665b&app_key=e21de4b721adb6cb82e8b44746d017d3%09&cuisineType=Chinese&cuisineType=Mexican&cuisineType=Indian&mealType=Breakfast&mealType=Lunch&mealType=Dinner&time=1%2B&imageSize=LARGE&random=false")
         .then(response => response.json())
         .then(data => {
-            data.results.forEach(result => {
-                let recipe = {
-                    id: result.id, 
-                    name: result.title , 
-                    image: result.image, 
-                    type: result.cuisines.map(type => type.toLowerCase()), 
-                    meal: result.dishTypes.map(meal=> meal.toLowerCase()),
-                    rating: result.spoonacularScore.toFixed(2), 
-                    numberOfReviews: result.aggregateLikes, 
-                    cookingTime: result.readyInMinutes, 
-                    healthScore: result.healthScore, 
-                    numberOfServings: result.servings, 
-                    ingredients: result.extendedIngredients.map(ingred => ingred.original), 
-                    directions: result.analyzedInstructions[0].steps.map(dir => dir.step)
-                }
-                localRecipes.push(recipe);
-            })
-            setRecipes(localRecipes);
-            setPublishedRecipes(localRecipes);
+          let localRecipes=[]; 
+          let i=1; 
+          data.hits.forEach(item => {
+            let recipe = {
+              id: i,
+              name: item.recipe.label,
+              image:item.recipe.images.LARGE.url,
+              type: item.recipe.cuisineType,
+              meal:item.recipe.mealType[0],
+              // rating: result.spoonacularScore.toFixed(2), 
+              // numberOfReviews: result.aggregateLikes, 
+              cookingTime: item.recipe.totalTime, 
+              numberOfServings: item.recipe.yield, 
+              ingredients: item.recipe.ingredients.map(ingred => ingred.text)
+              // directions: result.analyzedInstructions[0].steps.map(dir => dir.step)
+            }
+            i++; 
+            localRecipes.push(recipe);
+          })
+          setRecipes(localRecipes);
+          setPublishedRecipes(localRecipes);
         })
-        .catch(error => console.error(error))
+        .catch(err=> console.error(err))
+      }, [])
+    // useEffect(()=>{
+    //     let localRecipes = []; 
+    //     fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=598856858b914ca7bf3be933a61434e4&cuisine=chinese,indian,mexican&instructionsRequired=true&addRecipeInformation=true&fillIngredients=true&number=20")
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         data.results.forEach(result => {
+    //             let recipe = {
+    //                 id: result.id, 
+    //                 name: result.title , 
+    //                 image: result.image, 
+    //                 type: result.cuisines.map(type => type.toLowerCase()), 
+    //                 meal: result.dishTypes.map(meal=> meal.toLowerCase()),
+    //                 rating: result.spoonacularScore.toFixed(2), 
+    //                 numberOfReviews: result.aggregateLikes, 
+    //                 cookingTime: result.readyInMinutes, 
+    //                 healthScore: result.healthScore, 
+    //                 numberOfServings: result.servings, 
+    //                 ingredients: result.extendedIngredients.map(ingred => ingred.original), 
+    //                 directions: result.analyzedInstructions[0].steps.map(dir => dir.step)
+    //             }
+    //             localRecipes.push(recipe);
+    //         })
+    //         setRecipes(localRecipes);
+    //         setPublishedRecipes(localRecipes);
+    //     })
+    //     .catch(error => console.error(error))
        
-    }, [])
+    // }, [])
+
     //filtering by searchParams
     useEffect (()=>{
         function filterByParams(){
