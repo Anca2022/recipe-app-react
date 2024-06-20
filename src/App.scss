@@ -314,11 +314,15 @@
                 flex-basis: 45%;
                 ul{
                     padding-right: 10px;
-                    border-right: 2px solid var(--accent-30);
                 }
             }
             div:nth-child(2){
                 flex-basis: 55%;
+                ul{
+                    margin-left:-10px;
+                    padding-left: 40px;
+                    border-left: 2px solid var(--accent-30);
+                }
             }
         }
     }

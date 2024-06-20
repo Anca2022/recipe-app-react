@@ -27,10 +27,9 @@ export default function RecipeDetails(){
                 </div>
                 <div>
                     <h2>Directions</h2>
-                    <p>Aici vin instructiunile de pe celalalt API</p>
-                    {/* <ul>
+                    <ul>
                         {state.directions.map(step => <li>{step}</li>)}
-                    </ul> */}
+                    </ul>
                 </div>
             </div>
         </div>
